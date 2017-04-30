@@ -8,6 +8,7 @@
     "docs:deploy": "bash ./deploy-docs.sh"
   },
   "devDependencies": {
+    "eslint": "^3.19.0",
     "vue-cli": "^2.8.1"
   }
 }
