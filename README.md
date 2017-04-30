@@ -21,7 +21,7 @@ $ npm install
 $ npm run dev
 ```
 
-If port 8080 is already in use on your machine you must change the port number in `/config/index.js`. Otherwise `npm run dev` will fail.
+If port 4000 is already in use on your machine you must change the port number in `/config/index.js`. Otherwise `npm run dev` will fail.
 
 ## What's Included
 
@@ -56,4 +56,31 @@ You can fork this repo to create your own boilerplate, and use it with `vue-cli`
 
 ``` bash
 vue init username/repo my-project
+```
+
+### Visual Code
+You must install the following packages:
+- Color Highlight
+- Beautify
+- EsLint
+- vetur
+
+User configuration:
+```json
+"eslint.validate": [
+  "javascript",
+  "javascriptreact",
+  "html",
+  "vue"
+],
+"emmet.syntaxProfiles": {
+  "vue-html": "html",
+  "vue": "html"
+},
+"files.associations": {
+  "*.vue": "vue" 
+},
+"color-highlight.markerType": "underline",
+"color-highlight.matchWords": false,
+"color-highlight.markRuler": false,
 ```
