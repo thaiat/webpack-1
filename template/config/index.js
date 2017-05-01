@@ -2,6 +2,7 @@
 var path = require('path');
 
 module.exports = {
+  staticSrc: './src/static',
   build: {
     env: require('./prod.env'),
     index: path.resolve(__dirname, '../dist/index.html'),
