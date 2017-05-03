@@ -4,7 +4,7 @@
 {{/if_eq}}
 import Vue from 'vue';
 import App from './App';
-import store from './store'
+import store from './store';
 import './assets/styles/app.scss';
 {{#router}}
 import router from './router';
