@@ -4,6 +4,7 @@
 {{/if_eq}}
 import Vue from 'vue';
 import App from './App';
+import store from './store'
 import './assets/styles/app.scss';
 {{#router}}
 import router from './router';
@@ -22,6 +23,7 @@ new Vue({
   {{/if_eq}}
   {{#if_eq build "standalone"}}
   template: '<App/>',
+  store,
   components: { App }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
   {{/if_eq}}
 });
