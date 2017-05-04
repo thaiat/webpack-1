@@ -4,8 +4,9 @@ var utils = require('./utils');
 var webpack = require('webpack');
 var merge = require('webpack-merge');
 var baseConfig = require('./webpack.base.conf');
-
+process.noDeprecation = true;
 var webpackConfig = merge(baseConfig, {
+  target: 'node',
   // use inline sourcemap for karma-sourcemap-loader
   module: {
     rules: utils.styleLoaders()
