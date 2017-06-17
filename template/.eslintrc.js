@@ -139,6 +139,7 @@ module.exports = {
     'semi': ['error', 'always'],
     'semi-spacing': 2,
     'space-before-function-paren': [2, 'never'],
+    'spaced-comment': 0,
     'space-infix-ops': [2, { 'int32Hint': false }],
     'strict': [2, 'global'],
     'use-isnan': 2,
