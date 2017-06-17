@@ -41,6 +41,7 @@ var app = {
       components: { App }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
       {{/if_eq}}
     });
+  }
 };
 
 app.initialize();

@@ -135,6 +135,7 @@ module.exports = {
     'no-use-before-define': 0,
     'no-warning-comments': [1, { 'terms': ['todo', 'fixme', 'xxx'], 'location': 'start' }],
     'no-with': 2,
+    'padded-blocks': 0,
     'quotes': [2, 'single'],
     'semi': ['error', 'always'],
     'semi-spacing': 2,
