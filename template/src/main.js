@@ -11,19 +11,36 @@ import router from './router';
 {{/router}}
 
 Vue.config.productionTip = false;
+var app = {
+  initialize() {
+    this.bindEvents();
+  },
+  bindEvents() {
+    if (process.env.CORDOVA === 'true') {
+      document.addEventListener('deviceready', () => this.onReady());
+    } else {
+      document.addEventListener('DOMContentLoaded', () => this.onReady());
+    }
+  },
+  onReady() {
+    this.setupVue();
+  },
+  setupVue() {
+    /* eslint-disable no-new */
+    new Vue({
+      el: '#app',
+      {{#router}}
+      router,
+      {{/router}}
+      {{#if_eq build "runtime"}}
+      render: h => h(App){{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+      {{/if_eq}}
+      {{#if_eq build "standalone"}}
+      template: '<App/>',
+      store,
+      components: { App }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+      {{/if_eq}}
+    });
+};
 
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  {{#router}}
-  router,
-  {{/router}}
-  {{#if_eq build "runtime"}}
-  render: h => h(App){{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-  {{/if_eq}}
-  {{#if_eq build "standalone"}}
-  template: '<App/>',
-  store,
-  components: { App }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-  {{/if_eq}}
-});
+app.initialize();
