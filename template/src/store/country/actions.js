@@ -1,6 +1,6 @@
 import * as types from './mutation-types';
 import * as rootTypes from '../mutation-types';
-import countryApi from '@/api/country';
+import countryApi from '@/services/country';
 
 const actions = {
   fetchCountries({ state, commit, dispatch, rootState }, limit) {
