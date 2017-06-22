@@ -83,6 +83,7 @@
     "karma-spec-reporter": "0.0.30",
     "karma-webpack": "^2.0.2",
     "lolex": "^1.5.2",
+    "material-design-icons-font": "^2.2.3",
     "mocha": "^3.2.0",
     "mocha-webpack": "^0.7.0",
     "chai": "^3.5.0",

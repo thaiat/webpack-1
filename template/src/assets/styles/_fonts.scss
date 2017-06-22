@@ -1,4 +1,8 @@
 $fa-font-path: '../../../node_modules/font-awesome/fonts';
 @import '../../../node_modules/font-awesome/scss/font-awesome';
+
 $roboto-font-path: '../../../node_modules/roboto-fontface/fonts';
 @import '../../../node_modules/roboto-fontface/css/roboto/sass/roboto-fontface';
+
+$material-font-path: '../../../node_modules/material-design-icons-font/iconfont/';
+@import '../../../node_modules/material-design-icons-font/iconfont/material-icons.scss';
