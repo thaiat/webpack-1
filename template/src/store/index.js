@@ -1,9 +1,14 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import createLogger from '../plugins/vuex-logger';
-import countryStore from './country';
+
+// global store
 import getters from './getters';
 import mutations from './mutations';
+import actions from './actions';
+
+// modules
+import countryStore from './country';
 
 Vue.use(Vuex);
 
@@ -21,6 +26,7 @@ const store = new Vuex.Store({
   state,
   getters,
   mutations,
+  actions,
   modules: {
     country: countryStore
   }
