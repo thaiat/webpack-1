@@ -1,13 +1,15 @@
 <template>
   <div class="hello">
-    <img src="../assets/images/logo.svg" />
-    <h1>\{{ msg }}</h1>
+    <img src="../assets/images/logo.svg" >
+    <h1>\{{ $t('HELLO') }}, \{{ $t('WELCOME') }}</h1>
     <div>isLoading: \{{loading}}</div>
     <div>error: \{{error.message}}</div>
-  
+    <button @click="setLocale('fr')">Set Local to fr</button>
+    <button @click="setLocale('en')">Set Local to en</button>
+    <button @click="setLocale('en_GB')">Set Local to en_GB</button>
     <button @click="fetchCountries(10)">Load Countries</button>
     <ul>
-      <li v-for="country, countryIndex in countries">\{{countryIndex + 1}} - \{{country.name}}</li>
+      <li v-for="(country, countryIndex) in countries" :key="country.name">\{{countryIndex + 1}} - \{{country.name}}</li>
     </ul>
   </div>
 </template>
@@ -25,7 +27,7 @@ export default {
   },
   methods: {
     ...mapActions({
-      increment: 'increment',
+      setLocale: 'setLocale',
       fetchCountries: 'country/fetchCountries'
     })
   },

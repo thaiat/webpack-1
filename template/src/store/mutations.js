@@ -11,6 +11,9 @@ const mutations = {
   },
   [types.FETCH_SUCCESS](state) {
     state.loading = false;
+  },
+  [types.SET_LOCALE_SUCCESS](state, locale) {
+    state.locale = locale;
   }
 };
 

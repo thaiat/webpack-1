@@ -11,7 +11,8 @@ const debug = process.env.NODE_ENV !== 'production';
 
 var state = {
   loading: false,
-  error: {}
+  error: {},
+  locale: null
 };
 
 const store = new Vuex.Store({
