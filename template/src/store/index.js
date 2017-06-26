@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import createLogger from 'vuex/dist/logger';
+// import createLogger from 'vuex/dist/logger';
 
 // global store
 import getters from './getters';
@@ -22,7 +22,7 @@ var state = {
 
 const store = new Vuex.Store({
   strict: debug,
-  plugins: debug ? [createLogger()] : [],
+  // plugins: debug ? [createLogger()] : [],
   state,
   getters,
   mutations,
