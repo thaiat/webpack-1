@@ -7,6 +7,8 @@ import Vue from 'vue';
 import i18n from './locales';
 import store from './store';
 import App from './App';
+import directives from './directives';
+import components from './components';
 {{#router}}
 import router from './router';
 {{/router}}
@@ -24,7 +26,27 @@ var app = {
     }
   },
   onReady() {
+    this.setUpDirectives();
+    this.setUpComponents();
     this.setupVue();
+  },
+  /**
+   * Set up the directives globally
+   */
+  setUpDirectives() {
+    Object.keys(directives).forEach(key => {
+      Vue.directive(key, directives[key]);
+    });
+  },
+
+  /**
+   * Set up components globallu
+   */
+  setUpComponents() {
+    let prefix = '';
+    Object.keys(components).forEach(key => {
+      Vue.component(`${prefix}${key}`, components[key]);
+    });
   },
   setupVue() {
     /* eslint-disable no-new */

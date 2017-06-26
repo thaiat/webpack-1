@@ -22,7 +22,7 @@ describe('Components', () => {
 
       return Vue.nextTick()
         .then(() => {
-          expect(vm.$el.querySelector('.hello h1').textContent).to.equal('Welcome to Your Vue.js App');
+          expect(vm.$el.querySelector('.hello h1').textContent).to.equal('Hi, Welcome to your Vue.js app');
         });
     });
   });
