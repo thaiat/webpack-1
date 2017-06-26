@@ -1,3 +1,3 @@
-exprt default {
+export default {
 
 };
