@@ -7,8 +7,6 @@ import Vue from 'vue';
 import i18n from './locales';
 import store from './store';
 import App from './App';
-
-
 {{#router}}
 import router from './router';
 {{/router}}

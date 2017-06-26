@@ -1,11 +1,15 @@
 import Vue from 'vue';
-import Hello from '@/components/Hello';
+import Hello from '@/pages/Hello';
+import i18n from '@/locales';
+import store from '@/store';
 
 describe('Components', () => {
   describe('Hello.vue', () => {
 
     it('should render correct contents', () => {
       const vm = new Vue({
+        store,
+        i18n,
         template: `
         <div>
           <test></test>
