@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import createLogger from '../plugins/vuex-logger';
+import createLogger from 'vuex/dist/logger';
 
 // global store
 import getters from './getters';

@@ -16,5 +16,5 @@ const i18n = new VueI18n({
   locale: ls.get(LOCALE) || locales[0],
   messages
 });
-global.i18n = i18n;
+Vue.i18n = i18n;
 export default i18n;
