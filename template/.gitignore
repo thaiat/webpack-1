@@ -24,7 +24,6 @@ coverage/
 reports/
 
 # Build
-build/
 dist/
 .tmp
 
